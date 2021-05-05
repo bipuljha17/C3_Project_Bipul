@@ -64,25 +64,4 @@ class RestaurantTest {
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-    //>>>>>>>>>>>>>>>>>>>>>>Price Calculation<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-    @Test
-    public void total_price_of_menu_item_selected_should_be_item_price() {
-        List<String> selectedMenu = new ArrayList<>();
-        selectedMenu.add("Sweet corn soup");
-        int price = restaurant.calculatePrice(selectedMenu);
-        assertEquals(price, 119);
-    }
-
-    @Test
-    public void total_price_of_menu_item_selected_should_be_sum_of_all_item_price() {
-        List<String> selectedMenu = new ArrayList<>();
-        selectedMenu.add("Sweet corn soup");
-        selectedMenu.add("Vegetable lasagne");
-        int price = restaurant.calculatePrice(selectedMenu);
-        assertEquals(price, 388);
-    }
-
-
-    //>>>>>>>>>>>>>>>>>>>>>>Price Calculation<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 }
