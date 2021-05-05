@@ -63,4 +63,16 @@ public class Restaurant {
     public String getName() {
         return name;
     }
+
+    public int calculatePrice(List<String> selectedMenu) {
+        int price = 0;
+        for (Item item : menu) {
+            for (String selectedItem: selectedMenu) {
+                if(item.getName() == selectedItem){
+                    price = price + item.getPrice();
+                }
+            }
+        }
+        return price;
+    }
 }
